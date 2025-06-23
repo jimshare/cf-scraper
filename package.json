@@ -1,0 +1,11 @@
+{
+  "name": "url-text-fetcher-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker to fetch and extract text from URLs",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "wrangler deploy"
+  },
+  "keywords": ["cloudflare", "worker", "url", "text-extraction"],
+  "author": "Jim Pugh"
+}
