@@ -1,4 +1,4 @@
-name = "url-text-fetcher"
+name = "url-text-fetcher-worker"
 main = "index.js"
 compatibility_date = "2024-01-01"
 
