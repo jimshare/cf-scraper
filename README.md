@@ -9,12 +9,14 @@ Cloudflare Worker that scrapes text from a public webpage, accessible via front-
 
 ## Response Format
 
-```{
+```
+{
   "url": "https://example.com",
   "contentType": "text/html; charset=utf-8",
   "text": "Extracted text content here...",
   "length": 1234
-}```
+}
+```
 
 ## To Deploy This Worker
 
