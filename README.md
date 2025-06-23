@@ -4,17 +4,17 @@ Cloudflare Worker that scrapes text from a public webpage, accessible via front-
 
 ## Usage Examples
 
-https://your-worker.domain.workers.dev/?url=https://example.com
-https://your-worker.domain.workers.dev/?url=https://news.ycombinator.com
+- https://your-worker.domain.workers.dev/?url=https://example.com
+- https://your-worker.domain.workers.dev/?url=https://news.ycombinator.com
 
 ## Response Format
 
-{
+```{
   "url": "https://example.com",
   "contentType": "text/html; charset=utf-8",
   "text": "Extracted text content here...",
   "length": 1234
-}
+}```
 
 ## To Deploy This Worker
 
