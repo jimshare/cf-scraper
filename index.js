@@ -91,8 +91,12 @@ export default {
         let textContent = html
           .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
           .replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, '')
-          .replace(/<[^>]*>/g, ' ') // Remove HTML tags
-          .replace(/\s+/g, ' ') // Normalize whitespace
+          // Add line breaks for block elements before removing tags
+          .replace(/<\/?(p|div|h[1-6]|li|br|hr|blockquote|pre|section|article|header|footer|nav|aside)[^>]*>/gi, '\n')
+          .replace(/<[^>]*>/g, ' ') // Remove remaining HTML tags
+          .replace(/[ \t]+/g, ' ') // Normalize spaces and tabs but preserve line breaks
+          .replace(/\n\s*/g, '\n') // Clean up line breaks (remove spaces after them)
+          .replace(/\n{3,}/g, '\n\n') // Limit consecutive line breaks to maximum of 2
           .trim();
 
         return new Response(
